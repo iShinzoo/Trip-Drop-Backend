@@ -7,7 +7,6 @@ import java.util.*
 fun generateToken(userId: String): String {
     val jwtIssuer = "com.example"
     val jwtAudience = "com.example.audience"
-    val jwtRealm = "com.example.realm"
     val secret = "jwt-secret"
 
     return JWT.create()
