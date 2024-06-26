@@ -10,10 +10,10 @@ import org.litote.kmongo.reactivestreams.KMongo
 
 object Database {
 
-    val mongoPw = "krishna1234"
+    val mongopw = System.getenv("MONGO_PW")
 
     private val client = KMongo.createClient(
-        connectionString = "mongodb+srv://krishna:$mongoPw@cluster0.kohzgju.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+        connectionString = "mongodb+srv://krishna:$mongopw@cluster0.hfyezac.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     ).coroutine
     val database: CoroutineDatabase = client.getDatabase("tripdrop")
 
