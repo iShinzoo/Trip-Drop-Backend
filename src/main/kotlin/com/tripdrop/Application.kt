@@ -32,7 +32,7 @@ fun Application.module() {
 
     routing {
         get("/") {
-            call.respondText("Trip Drop", ContentType.Text.Plain)
+            call.respondText("Trip Drop Backend Testing", ContentType.Text.Plain)
         }
         authRoutes(userRepository)
         authenticate {
